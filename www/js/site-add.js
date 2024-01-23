@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const selectedCategoryId = sessionStorage.getItem('selectedCategoryId');
   document.getElementById('categoryId').textContent = selectedCategoryId;
   loadSites(selectedCategoryId);
+
+  document.getElementById('generatePasswordButton').addEventListener('click', generateRandomPassword);
 });
 
 function loadSites(categoryId) {
@@ -90,4 +92,16 @@ function loadSiteDetails() {
   }
 }
 
+function generateRandomPassword() {
+  const length = 8;
+  const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  let password = '';
 
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * charset.length);
+    password += charset.charAt(randomIndex);
+  }
+
+
+  document.getElementById('newPasswordInput').value = password;
+}
