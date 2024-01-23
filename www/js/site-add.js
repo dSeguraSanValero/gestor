@@ -93,8 +93,8 @@ function loadSiteDetails() {
 }
 
 function generateRandomPassword() {
-  const length = 8;
-  const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const length = 12;
+  const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$&';
   let password = '';
 
   for (let i = 0; i < length; i++) {
