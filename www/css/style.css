@@ -1,0 +1,63 @@
+.body {
+    background-color: rgb(202, 237, 255);
+}
+
+.contenedor-principal {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.contenedor-categorias {
+    width: 25%;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px;
+}
+
+.table {
+    justify-content: space-between;
+}
+
+.contenedor-add-categories {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(232, 232, 232);
+    border: solid 1px;
+}
+
+.contenedor-sites {
+    width: 75%;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px;
+    margin-left: 30px; 
+}
+
+.selected {
+    background-color: #b0b0b0;
+}
+
+.show-button {
+    margin: 5px;
+    background-color: rgb(141, 184, 255);
+    color: rgb(0, 0, 0);
+}
+
+.delete-button {
+    margin: 5px;
+    background-color: rgb(183, 3, 3);
+    color: rgb(255, 255, 255);
+}
+
+.boton-add-category {
+    padding: 20px;
+}
+
+.contenedor-formulario {
+    width: 100%;
+    padding: 10px;
+}
+
+.opciones {
+    display: flex;
+}

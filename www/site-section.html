@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/main.js"></script>
+  <script src="./js/site-add.js"></script>
+  <title>Gestor de contraseñas</title>
+</head>
+
+<body class="body">
+  <h1>Sección de Sitios</h1>
+
+  <p>Category ID: <span id="categoryId"></span></p>
+
+  <div>
+    
+    <div class="contenedor-formulario">
+      <label for="newNameInput">Nombre del sitio:</label>
+      <input type="text" id="newNameInput" placeholder="Nombre del sitio">
+    </div>
+    
+    <div class="contenedor-formulario">
+      <label for="newUrlInput">URL del sitio:</label>
+      <input type="text" id="newUrlInput" placeholder="URL del sitio">
+    </div>
+
+    <div class="contenedor-formulario">
+      <label for="newUserInput">Usuario del sitio:</label>
+      <input type="text" id="newUserInput" placeholder="Usuario del sitio">
+    </div>
+
+    <div class="contenedor-formulario">
+      <label for="newPasswordInput">Contraseña del sitio:</label>
+      <input type="text" id="newPasswordInput" placeholder="Contraseña del sitio">
+    </div>
+
+    <div class="contenedor-formulario">
+      <label for="newDescriptionInput">Descripción del sitio:</label>
+      <input type="text" id="newDescriptionInput" placeholder="Descripción del sitio">
+    </div>
+
+  </div>
+
+  <button onclick="addSite()">Añadir Sitio</button>
+
+  <div id="siteList"></div>
+
+  <script src="./js/site-section.js"></script>
+</body>
+
+</html>
