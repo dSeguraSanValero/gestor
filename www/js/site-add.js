@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('generatePasswordButton').addEventListener('click', generateRandomPassword);
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  loadSiteDetails();
+});
+
+
 function loadSites(categoryId) {
   const siteList = document.getElementById('siteList');
 
@@ -22,7 +28,7 @@ function loadSites(categoryId) {
       });
     })
     .catch(error => {
-      console.error('Error fetching sites:', error);
+      console.error('Error al cargar los sitios:', error);
     });
 }
 
@@ -63,9 +69,6 @@ function addSite() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  loadSiteDetails();
-});
 
 function loadSiteDetails() {
   const selectedSiteId = sessionStorage.getItem('selectedSiteId');
@@ -92,6 +95,7 @@ function loadSiteDetails() {
   }
 }
 
+
 function generateRandomPassword() {
   const length = 12;
   const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$&';
@@ -101,7 +105,6 @@ function generateRandomPassword() {
     const randomIndex = Math.floor(Math.random() * charset.length);
     password += charset.charAt(randomIndex);
   }
-
 
   document.getElementById('newPasswordInput').value = password;
 }

@@ -49,6 +49,12 @@
     color: rgb(255, 255, 255);
 }
 
+.edite-button {
+    margin: 5px;
+    background-color: rgb(5, 9, 255);
+    color: rgb(255, 255, 255);
+}
+
 .boton-add-category {
     padding: 20px;
 }
