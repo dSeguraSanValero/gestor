@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
   const selectedCategoryId = sessionStorage.getItem('selectedCategoryId');
   document.getElementById('categoryId').textContent = selectedCategoryId;
 
@@ -13,14 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('Error al obtener los detalles de la categoría:', error);
     });
 
-
   loadSites(selectedCategoryId);
 
-  document.getElementById('generatePasswordButton').addEventListener('click', generateRandomPassword);
-});
+  document.getElementById('generatePasswordButton').addEventListener('click', () => {
+    generateRandomPassword();
+  });
 
-
-document.addEventListener('DOMContentLoaded', () => {
   loadSiteDetails();
 });
 
