@@ -43,10 +43,8 @@
     color: rgb(0, 0, 0);
 }
 
-.delete-button {
+.my-button {
     margin: 5px;
-    background-color: rgb(183, 3, 3);
-    color: rgb(255, 255, 255);
 }
 
 .edite-button {
@@ -59,9 +57,25 @@
     padding: 20px;
 }
 
+.contenedor-informacion {
+    justify-content: left;
+    padding: 10px;
+}
+
 .contenedor-formulario {
+    background-color: rgb(230, 230, 230);
+    border: solid 1px;
+}
+
+.labels {
     width: 100%;
     padding: 10px;
+    justify-content: center;
+    align-items: left;
+}
+
+.descripcion {
+    width: 75%;
 }
 
 .opciones {

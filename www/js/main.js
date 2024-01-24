@@ -8,7 +8,7 @@ let drawCategories = (data) => {
 
   data.forEach(category => {
     let child = document.createElement('li');
-    child.textContent = `${category.name} (${category.id})`;
+    child.textContent = `${category.name}`;
     
     child.setAttribute('data-category-id', category.id);
 
@@ -27,7 +27,7 @@ let drawCategories = (data) => {
 
     let deleteButton = document.createElement('button');
     deleteButton.innerText = 'Eliminar';
-    deleteButton.classList.add('delete-button');
+    deleteButton.classList.add('btn', 'btn-danger', 'my-button');
     deleteButton.addEventListener('click', () => deleteCategory(category.id));
 
     child.appendChild(deleteButton);
@@ -140,14 +140,14 @@ let drawSites = (data) => {
     let deleteCell = row.insertCell(5);
     let deleteSiteButton = document.createElement('button');
     deleteSiteButton.innerText = 'Eliminar sitio';
-    deleteSiteButton.classList.add('delete-button');
+    deleteSiteButton.classList.add('btn', 'btn-danger', 'my-button');
     deleteSiteButton.addEventListener('click', () => deleteSite(site.id, site.categoryId));
     deleteCell.appendChild(deleteSiteButton);
 
     let editCell = row.insertCell(6);
     let editSiteButton = document.createElement('button');
     editSiteButton.innerText = 'Editar sitio';
-    editSiteButton.classList.add('edite-button');
+    editSiteButton.classList.add('btn', 'btn-primary', 'my-button');
     editSiteButton.addEventListener('click', () => redirectToEditSite(site.id));
     editCell.appendChild(editSiteButton);
   });

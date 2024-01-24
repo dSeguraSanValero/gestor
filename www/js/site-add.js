@@ -2,6 +2,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const selectedCategoryId = sessionStorage.getItem('selectedCategoryId');
   document.getElementById('categoryId').textContent = selectedCategoryId;
+
+  fetch(`http://localhost:3000/categories/${selectedCategoryId}`)
+    .then(response => response.json())
+    .then(categoryData => {
+      const categoryName = categoryData.name;
+      document.getElementById('categoryName').textContent = categoryName;
+    })
+    .catch(error => {
+      console.error('Error al obtener los detalles de la categoría:', error);
+    });
+
+
   loadSites(selectedCategoryId);
 
   document.getElementById('generatePasswordButton').addEventListener('click', generateRandomPassword);
@@ -98,7 +110,7 @@ function loadSiteDetails() {
 
 function generateRandomPassword() {
   const length = 12;
-  const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$&';
+  const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$&/()=?¿*|!"[]^*{}';
   let password = '';
 
   for (let i = 0; i < length; i++) {
